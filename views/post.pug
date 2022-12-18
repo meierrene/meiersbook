@@ -1,0 +1,12 @@
+extends base
+
+block content
+  .post-container(data-id=post.id)
+    h1.title-heading= post.title
+    p.front-panel= post.content
+    .post-image
+      img(src=`/img/posts/${post.image}`)
+    .buttons-nav.front-panel
+      a.btn(href="/#") Go back
+      a.btn(href=`${post.id}/editpost`) Modify
+      a.btn.delete-btn(href="/") Delete post
