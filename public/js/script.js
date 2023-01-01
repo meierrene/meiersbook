@@ -59,7 +59,6 @@ if (postDataForm) {
     const form = new FormData();
     if (inputImage.files[0]) form.append('image', inputImage.files[0]);
     form.append('title', document.getElementById('title').value);
-    form.append('content', document.getElementById('content').value);
     if (newId) getData(form, 'new');
     if (editId) getData(form, 'edit');
   });

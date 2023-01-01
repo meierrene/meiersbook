@@ -2,6 +2,7 @@ const express = require('express');
 const postRouter = require('./routes/postRoutes');
 const viewRouter = require('./routes/viewRoutes');
 const ErrorThrower = require('./utils/ErrorThrower');
+const errorController = require('./controllers/errorController');
 
 const app = express();
 
@@ -18,5 +19,7 @@ app.use('/api/v1/posts', postRouter);
 app.all('*', (req, res, next) => {
   next(new ErrorThrower(`Can't find ${req.originalUrl} on this server!`, 404));
 });
+
+app.use(errorController);
 
 module.exports = app;

@@ -54,8 +54,9 @@ body {
 }
 
 .title-heading {
-  padding-top: 0.8rem;
+  padding: 0.8rem;
   font-size: 1.6rem;
+  word-break: break-all;
 }
 
 .text-comment {
@@ -124,8 +125,9 @@ body {
 }
 
 .post-image img {
-  border-radius: 16px;
+  border-radius: 0.8rem;
   max-width: 100%;
+  max-height: 90rem;
 }
 
 .card:hover {
@@ -159,6 +161,23 @@ body {
   text-decoration: none;
 }
 
+.error {
+  text-align: center;
+}
+
+.error-image {
+  max-width: 36rem;
+}
+
+.error-title h2 {
+  margin: 4.8rem 1.2rem;
+  font-size: 2.4rem;
+}
+
+.error-message {
+  font-size: 1.6rem;
+}
+
 .footer {
   text-align: center;
   position: absolute;
@@ -166,7 +185,7 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
-  font-size: 1rem;
+  font-size: 1.4rem;
   width: 100%;
   color: var(--main-color);
 }

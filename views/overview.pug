@@ -6,12 +6,12 @@ mixin postsNumber(number)
   - else 
     h1.primary-heading= `You have no posts! How about to create one?`
 
-mixin contentReducer(text,limit)
-  - if(!text) text=''
-  - if(text.length > limit)
-    p.text-comment= `${text.slice(0,limit)}... Read more`
-  - else 
-    p.text-comment= text
+//- mixin textReducer(text,limit)
+//-   - if(!text) text=''
+//-   - if(text.length > limit)
+//-     p.text-comment= `${text.slice(0,limit)}... Read more`
+//-   - else 
+//-     p.text-comment= text
 
 
 block content
@@ -27,5 +27,4 @@ block content
             - if(post.image)
               img(src=`/img/posts/${post.image}`)
           h1.title-heading= post.title
-          +contentReducer(post.content,32)
           .date-created= `Created at: ${date}` 

@@ -1,5 +1,4 @@
 extends base
-
 block content
 
   h1.primary-heading=post?'Update Post':'New Post'
@@ -10,15 +9,12 @@ block content
           img(src=`/img/posts/${post.image}`, alt='Post image')
       input#image.btn(type='file', accept='image/*',name='image')
     div.form-group
-      label(for='title') Title
-      input.title-heading.form-control#title(type='text' name='title'
-      value=post?post.title:'' autofocus required)  
-    div.form-group
-      label Content
-      textarea.text-comment.form-control#content(
+      label.title-heading(for='title') Description
+      textarea.title-heading.form-control#title(
         type='text'
-        name='content'
-        rows='6')=post?post.content:''
+        name='title'
+        rows='6'
+        autofocus)=post?post.title:''
     div.buttons-nav
       a.btn(href="/#") Go back
       button.btn=post?'Update':'Publish'
