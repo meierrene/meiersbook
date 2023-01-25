@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js",
-    "vercel-build": "node ./build.js"
+    "start:prod": "NODE_ENV=production nodemon server.js"
   },
   "author": "",
   "license": "ISC",
